@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="hero-title hero-desc">
+  <defs>
+    <linearGradient id="etmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08110d"/>
+      <stop offset="100%" stop-color="#0b1a14"/>
+    </linearGradient>
+    <linearGradient id="etmAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00c896"/>
+      <stop offset="100%" stop-color="#00a37a"/>
+    </linearGradient>
+  </defs>
+
+  <title id="hero-title">etmoney-lyr — ET Money research layer for AI agents</title>
+  <desc id="hero-desc">Split hero: on the left, the project name and promise; on the right, a real mutual-fund report card the tools return — NAV, rating, returns versus category, top holding.</desc>
+
+  <rect width="1200" height="380" fill="url(#etmBg)"/>
+  <rect x="0" y="0" width="1200" height="4" fill="url(#etmAccent)"/>
+
+  <!-- ── left: identity ─────────────────────────────────────────── -->
+  <g transform="translate(64 64)">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="17" letter-spacing="4" fill="#00c896" font-weight="600">ET MONEY RESEARCH LAYER</text>
+
+    <text y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="58" font-weight="700" fill="#eef7f2" letter-spacing="-1">etmoney-lyr</text>
+
+    <text y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="20" fill="#9fb8ac">67 fund categories &#183; stock screens &#183; NIFTY constituents</text>
+    <text y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          font-size="20" fill="#9fb8ac">as 10 MCP tools &#8212; no official API, no login</text>
+
+    <!-- tool chips -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
+      <rect x="0" y="170" width="118" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="59" y="190" text-anchor="middle" fill="#00c896">mf_search</text>
+      <rect x="128" y="170" width="98" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="177" y="190" text-anchor="middle" fill="#00c896">mf_list</text>
+      <rect x="236" y="170" width="106" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="289" y="190" text-anchor="middle" fill="#00c896">mf_detail</text>
+      <rect x="352" y="170" width="116" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="410" y="190" text-anchor="middle" fill="#00c896">mf_compare</text>
+      <rect x="0" y="210" width="112" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="56" y="230" text-anchor="middle" fill="#00c896">stock_screen</text>
+      <rect x="122" y="210" width="122" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="183" y="230" text-anchor="middle" fill="#00c896">index_stocks</text>
+      <rect x="254" y="210" width="104" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="306" y="230" text-anchor="middle" fill="#00c896">stock_detail</text>
+      <rect x="368" y="210" width="60" height="30" rx="15" fill="#10241c" stroke="#1d3a2e"/>
+      <text x="398" y="230" text-anchor="middle" fill="#6b7f76">+3 more</text>
+    </g>
+
+    <!-- metadata row -->
+    <text y="292" font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="16" fill="#6b7f76">stdio MCP &#183; read-only &#183; python 3.11+ &#183; uv tool install</text>
+  </g>
+
+  <!-- ── right: real proof — fund report card ───────────────────── -->
+  <g transform="translate(672 44)">
+    <rect width="472" height="292" rx="18" fill="#0d2018" stroke="#1d3a2e"/>
+    <rect x="24" y="24" width="86" height="26" rx="13" fill="#123527"/>
+    <text x="67" y="42" text-anchor="middle" font-family="ui-monospace, Menlo, monospace"
+          font-size="14" fill="#00c896">mf_detail(19230)</text>
+
+    <text x="24" y="86" font-family="-apple-system, 'Segoe UI', sans-serif"
+          font-size="22" font-weight="700" fill="#eef7f2">Parag Parikh Flexi Cap Fund</text>
+    <text x="24" y="112" font-family="-apple-system, 'Segoe UI', sans-serif"
+          font-size="16" fill="#6b7f76">Equity &#183; Flexi Cap &#183; Regular-Growth</text>
+
+    <!-- divider -->
+    <line x1="24" y1="130" x2="448" y2="130" stroke="#1d3a2e"/>
+
+    <!-- data rows: label / value / context -->
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">
+      <text x="24" y="158" fill="#6b7f76">NAV</text>
+      <text x="140" y="158" fill="#eef7f2">&#8377;82.81</text>
+      <text x="240" y="158" fill="#00c896">+0.13%</text>
+
+      <text x="24" y="186" fill="#6b7f76">rating</text>
+      <text x="140" y="186" fill="#ffb224">&#9733;&#9733;&#9733;&#9733;&#9733; 5.0</text>
+
+      <text x="24" y="214" fill="#6b7f76">1Y return</text>
+      <text x="140" y="214" fill="#ff7b6b">&#8722;2.02%</text>
+      <text x="250" y="214" fill="#6b7f76">vs cat avg +1.58%</text>
+
+      <text x="24" y="242" fill="#6b7f76">sharpe</text>
+      <text x="140" y="242" fill="#eef7f2">0.76</text>
+      <text x="250" y="242" fill="#6b7f76">beta 0.60 &#183; alpha 3.48</text>
+
+      <text x="24" y="270" fill="#6b7f76">top holding</text>
+      <text x="140" y="270" fill="#eef7f2">HDFC Bank 7.55%</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-labelledby="arch-title arch-desc">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#00c896"/>
+    </marker>
+  </defs>
+
+  <title id="arch-title">How etmoney-lyr works</title>
+  <desc id="arch-desc">Three ET Money data surfaces flow through dedicated parsers into one FastMCP server exposing ten tools to AI agents.</desc>
+
+  <rect width="1200" height="320" rx="18" fill="#08110d"/>
+
+  <!-- column headers -->
+  <g font-family="-apple-system, 'Segoe UI', sans-serif" font-size="17" letter-spacing="3" font-weight="600">
+    <text x="72" y="52" fill="#6b7f76">ET MONEY SURFACES</text>
+    <text x="472" y="52" fill="#6b7f76">PARSERS</text>
+    <text x="852" y="52" fill="#6b7f76">YOUR AGENT GETS</text>
+  </g>
+
+  <!-- ── column 1: surfaces ─────────────────────────────────────── -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <rect x="56" y="76" width="300" height="62" rx="12" fill="#0d2018" stroke="#1d3a2e"/>
+    <text x="80" y="102" font-size="17" fill="#eef7f2">JSON APIs</text>
+    <text x="80" y="124" font-size="14" fill="#6b7f76">fund screener &#183; name search</text>
+
+    <rect x="56" y="154" width="300" height="62" rx="12" fill="#0d2018" stroke="#1d3a2e"/>
+    <text x="80" y="180" font-size="17" fill="#eef7f2">SSR pages + JS DTOs</text>
+    <text x="80" y="202" font-size="14" fill="#6b7f76">report card &#183; compare &#183; themes</text>
+
+    <rect x="56" y="232" width="300" height="62" rx="12" fill="#0d2018" stroke="#1d3a2e"/>
+    <text x="80" y="258" font-size="17" fill="#eef7f2">Next.js RSC payloads</text>
+    <text x="80" y="280" font-size="14" fill="#6b7f76">stock screens &#183; indices &#183; detail</text>
+  </g>
+
+  <!-- arrows col1 -> col2 -->
+  <line x1="362" y1="107" x2="440" y2="150" stroke="#00c896" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="362" y1="185" x2="440" y2="185" stroke="#00c896" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="362" y1="263" x2="440" y2="220" stroke="#00c896" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ── column 2: parsers ──────────────────────────────────────── -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <rect x="446" y="115" width="286" height="140" rx="12" fill="#0b1a14" stroke="#00c896" stroke-opacity="0.35"/>
+    <text x="470" y="147" font-size="17" fill="#00c896">parsers/</text>
+    <text x="470" y="175" font-size="15" fill="#9fb8ac">&#8594; balanced-brace DTO reader</text>
+    <text x="470" y="199" font-size="15" fill="#9fb8ac">&#8594; RSC flight-payload reassembler</text>
+    <text x="470" y="223" font-size="15" fill="#9fb8ac">&#8594; &#8377;-format + Cr/Lakh numbers</text>
+    <text x="470" y="243" font-size="16" fill="#6b7f76">fixture-tested against live pages</text>
+  </g>
+
+  <!-- arrow col2 -> col3 -->
+  <line x1="738" y1="185" x2="806" y2="185" stroke="#00c896" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ── column 3: server ───────────────────────────────────────── -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <rect x="812" y="76" width="332" height="218" rx="12" fill="#0d2018" stroke="#1d3a2e"/>
+    <rect x="812" y="76" width="332" height="44" rx="12" fill="#123527"/>
+    <text x="836" y="104" font-size="18" font-weight="700" fill="#00c896">etmoney-lyr server</text>
+
+    <text x="836" y="148" font-size="16" fill="#eef7f2">6 fund tools</text>
+    <text x="836" y="170" font-size="14" fill="#6b7f76">search &#183; list &#183; detail &#183; compare</text>
+    <text x="836" y="188" font-size="14" fill="#6b7f76">categories &#183; featured themes</text>
+
+    <text x="836" y="222" font-size="16" fill="#eef7f2">4 stock tools</text>
+    <text x="836" y="244" font-size="14" fill="#6b7f76">screens &#183; indices &#183; sectors &#183; detail</text>
+
+    <line x1="836" y1="260" x2="1120" y2="260" stroke="#1d3a2e"/>
+    <text x="836" y="284" font-size="14" fill="#9fb8ac">+ AXI CLI &#183; TOON output &#183; exit-code errors</text>
+  </g>
+</svg>

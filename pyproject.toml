@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etmoney-lyr"
+version = "0.1.0"
+description = "ET Money research layer for AI agents - mutual funds, stocks & market screens via MCP"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ishan Parihar" }]
+requires-python = ">=3.11"
+keywords = ["etmoney", "mutual-funds", "stocks", "india", "finance", "mcp", "ai-agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "fastmcp>=2.0.0",
+    "httpx>=0.27",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ishan-parihar/etmoney-lyr"
+Repository = "https://github.com/ishan-parihar/etmoney-lyr"
+Issues = "https://github.com/ishan-parihar/etmoney-lyr/issues"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.4"]
+
+[project.scripts]
+etmoney-lyr = "etmoney_lyr.cli_main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["etmoney_lyr*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = [
+    "E501",   # line length handled by the formatter
+    "BLE001", # tool boundaries deliberately catch-all and re-map to structured errors
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

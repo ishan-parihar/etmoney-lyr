@@ -1,0 +1,31 @@
+{
+  "manifest_version": "0.4",
+  "name": "etmoney-mcp-server",
+  "display_name": "ET Money Research (etmoney-lyr)",
+  "version": "0.1.0",
+  "description": "Read-only research layer over ET Money - all 67 mutual fund categories, stock screens, NIFTY index and sector constituents",
+  "long_description": "# etmoney-lyr\n\nReverse-engineers ET Money's research surfaces into agent tools: mutual funds across equity/debt/hybrid/gold/index/FoF categories, stock market screens, index and sector constituents. No login required; no transactions.\n\n## Quick start\n\n1. Install: install.sh or `uv tool install git+https://github.com/ishan-parihar/etmoney-lyr.git`\n2. Run server: `etmoney-lyr`\n3. Research: mf_search -> mf_detail -> mf_compare\n",
+  "author": {
+    "name": "Ishan Parihar",
+    "url": "https://github.com/ishan-parihar"
+  },
+  "homepage": "https://github.com/ishan-parihar/etmoney-lyr",
+  "documentation": "https://github.com/ishan-parihar/etmoney-lyr#readme",
+  "license": "MIT",
+  "keywords": [
+    "etmoney",
+    "mutual-funds",
+    "stocks",
+    "india",
+    "finance",
+    "research",
+    "mcp",
+    "ai-agents"
+  ],
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "transport": "stdio"
+}
