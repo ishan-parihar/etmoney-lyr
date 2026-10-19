@@ -71,7 +71,7 @@ Typical flow: `mf_search("small cap")` → `mf_detail(6558)` → `mf_compare([65
 uv tool install git+https://github.com/ishan-parihar/etmoney-lyr.git
 
 # or the bootstrapping installer (installs uv if missing; pipx/pip fallbacks)
-curl -sSL https://raw.githubusercontent.com/ishan-parihar/etmoney-lyr/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ishan-parihar/etmoney-lyr/main/install.sh | bash
 
 # upgrade anytime
 uv tool upgrade etmoney-lyr
