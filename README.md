@@ -163,3 +163,7 @@ MCP server, one AXI-compliant CLI.
 
 MIT — see [LICENSE](LICENSE). Not affiliated with ET Money / 360 ONE; data is
 public research information. Nothing here is investment advice.
+
+## Updating
+
+Use `etmoney-lyr update --check` to check without changing the installation, or `etmoney-lyr update` to update it. `etmoney-lyr upgrade` is an alias. The command delegates to the manager that owns this installation (`uv`, `pipx`, or `pip`) and refuses editable, local-checkout, system, or unknown installs instead of replacing package-manager-owned files. For example: `uv tool upgrade etmoney-lyr`.

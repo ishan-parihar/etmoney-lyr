@@ -312,6 +312,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("status", help="check upstream reachability")
 
+    s = sub.add_parser("update", aliases=["upgrade"], help="Update through the owning package manager")
+    s.add_argument("--check", action="store_true", help="Check without installing")
+    s.add_argument("--json", action="store_true", default=argparse.SUPPRESS, help="Emit JSON status")
     return p
 
 
@@ -365,6 +368,11 @@ def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
     as_json = getattr(args, "json", False)
 
+    if args.cmd in {"update", "upgrade"}:
+        from etmoney_lyr.updater import run_update
+
+        update_args = (["--check"] if args.check else []) + (["--json"] if as_json else [])
+        raise SystemExit(run_update(update_args, application="etmoney-lyr", package="etmoney-lyr"))
     if args.list_tools:
         rows = []
         for name, desc in TOOL_SUMMARY:
